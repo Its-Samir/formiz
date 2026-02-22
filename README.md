@@ -1,4 +1,6 @@
-# Formaze: An Easy Form Builder for React
+**Latest version has been released.**
+
+# Formaze: An Easy Form Builder for React (React 19 Compatible)
 
 Formaze is a flexible and customizable form builder for React built with `React Hook Form`, `Zod`, and `TailwindCSS`. It provides an easy way to build forms with custom validation schemas and handles complex form validation logic efficiently with proper type-safety.
 
@@ -370,7 +372,9 @@ This schema can then be passed to the Form component returned by `createFormVali
 
 ## Changes
 
-1. The `createFormValidator` has been changed and now it is accepting an argument which is a type of zod schema generated through `makeFormSchema` or directly from `Zod` and the rest of the logic will be the same as before.
+1. **(Latest) So after a long time i updated this package, as React upgraded its version, i was aware that the previous version of this package would give version compatibility errors. But now it is fixed**.
+
+2. The `createFormValidator` has been changed and now it is accepting an argument which is a type of zod schema generated through `makeFormSchema` or directly from `Zod` and the rest of the logic will be the same as before.
 
 In order to give proper type support for JavaScript projects and to simplify the defining process this change has been made.
 
@@ -386,8 +390,8 @@ const Form = createFormValidator<typeof formSchema>(); ❌
 const Form = createFormValidator(formSchema); ✔
 ```
 
-2. The Form component generated through `createFormValidator` method is now accepting an optional `mode` prop which you can read [about](#props-of-the-returned-form-component) here, and the `schema` prop of this Form component is now optional (**NOTE: In future version this prop will be deprecated. As of now this prop is no longer needed.**).
+3. The Form component generated through `createFormValidator` method is now accepting an optional `mode` prop which you can read [about](#props-of-the-returned-form-component) here, and the `schema` prop of this Form component is now optional (**NOTE: In future version this prop will be deprecated. As of now this prop is no longer needed.**).
 
-3. The name of the `useFormSchema` has been changed to `makeFormSchema`, as per React rules we cannot use hooks outside of a React Component and this naming convention was preventing it from being used outside of a React Component, but now it's been taken into consideration. You can now use it anywhere you want.
+4. The name of the `useFormSchema` has been changed to `makeFormSchema`, as per React rules we cannot use hooks outside of a React Component and this naming convention was preventing it from being used outside of a React Component, but now it's been taken into consideration. You can now use it anywhere you want.
 
 ## (That's it!)
