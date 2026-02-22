@@ -1,6 +1,6 @@
 **Latest version has been released.**
 
-# Formaze: An Easy Form Builder for React (React 19 Compatible)
+# Formaze: An Easy Form Builder for React
 
 Formaze is a flexible and customizable form builder for React built with `React Hook Form`, `Zod`, and `TailwindCSS`. It provides an easy way to build forms with custom validation schemas and handles complex form validation logic efficiently with proper type-safety.
 
